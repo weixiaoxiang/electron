@@ -1,1 +1,1 @@
-const menu = [];
+const menu = [{}];
