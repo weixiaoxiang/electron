@@ -1,0 +1,27 @@
+{
+  "name": "electron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "dev": "nodemon --exec electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/weixiaoxiang/electron.git"
+  },
+  "keywords": [
+    "electron"
+  ],
+  "author": "weixiaoxiang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/weixiaoxiang/electron/issues"
+  },
+  "homepage": "https://github.com/weixiaoxiang/electron#readme",
+  "dependencies": {
+    "electron": "^31.1.0",
+    "nodemon": "^3.1.4"
+  }
+}
