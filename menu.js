@@ -1,4 +1,4 @@
-const { app, Menu, shell, BrowserWindow } = require("electron");
+const { app, Menu, shell, BrowserWindow, dialog } = require("electron");
 const isMac = app.platform === "darwin";
 
 function createMenu(win) {
@@ -30,6 +30,14 @@ function createMenu(win) {
                 },
               },
               {
+                label: "打开文件夹",
+                click: () => {
+                  const result = dialog.showOpenDialogSync(win, {
+                    properties: ["openFile", "multiSelections"],
+                  });
+                },
+              },
+              {
                 type: "separator",
               },
               {
@@ -43,7 +51,11 @@ function createMenu(win) {
                   {
                     label: "退出",
                     click: () => {
-                      win.hide();
+                      // dialog提示
+                      dialog.showSaveDialog(win, { title: "保存文件 " }).then((res) => {
+                        console.log(res);
+                      });
+                      // win.hide();
                     },
                   },
                 ],

@@ -5,9 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline';" />
     <title>Document</title>
+    <style lang="css">
+      #container div {
+        line-height: 2em;
+        font-size: 16px;
+        margin: 5px 0;
+        border-bottom: 1px solid #ccc;
+      }
+      #container img {
+        width: 64px;
+        height: 64px;
+      }
+    </style>
   </head>
   <body>
-    <span>123</span>
+    <button id="selectBtn">选择文件</button>
+    <div id="container"></div>
   </body>
   <script src="./renderer.js"></script>
 </html>
