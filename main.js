@@ -5,6 +5,7 @@ require("./ipcMain");
 require("./contextmenu");
 app.whenReady().then(() => {
   const win = createWindow();
+
   // 创建菜单
   createMenu(win);
 });
