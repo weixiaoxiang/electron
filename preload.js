@@ -11,6 +11,9 @@ contextBridge.exposeInMainWorld("api", {
     const res = await ipcRenderer.invoke("selectFile");
     return res;
   },
+  saveFile: async (value) => {
+    return await ipcRenderer.invoke("saveFile", value);
+  },
 });
 
 window.addEventListener("contextmenu", (e) => {
