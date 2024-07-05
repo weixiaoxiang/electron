@@ -1,6 +1,6 @@
 const { app, Menu, shell, BrowserWindow, dialog } = require("electron");
 const isMac = app.platform === "darwin";
-
+//
 function createMenu(win) {
   const config = [
     ...(isMac
